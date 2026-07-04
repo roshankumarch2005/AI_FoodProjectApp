@@ -9,13 +9,13 @@ router.patch("/resetPassword/:token", authController.resetPassword);
 
 router.route("/logout").get(authController.logout);
 
-router.get("/test", (req, res) => {
+// router.get("/test", (req, res) => {
 
-  console.log("TEST ROUTE HIT");
+//   console.log("TEST ROUTE HIT");
 
-  res.json({ success: true });
+//   res.json({ success: true });
 
-});
+// });
 
 router.route("/me").get(authController.protect, authController.getUserProfile);
 router
